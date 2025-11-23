@@ -1,0 +1,24 @@
+/* .first-p,
+.second-p {
+  color: green;
+  font-weight: bold;
+}
+
+.second-p {
+  font-size: 12px;
+} */
+
+/* selectores combinados */
+h2.title {
+  background: yellow;
+}
+
+/* Selectores descendientes */
+
+p {
+  color: red;
+}
+
+div p {
+  color: blue;
+}

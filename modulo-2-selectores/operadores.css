@@ -1,0 +1,16 @@
+div * {
+  color: red;
+}
+
+article > p {
+  background: yellow;
+}
+
+div + p {
+  background: pink;
+}
+
+
+div ~ p {
+  background: pink;
+}

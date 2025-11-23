@@ -1,0 +1,36 @@
+body {
+  background: green;
+  /* Esta es una solución temporal hasta encontrar el error de la tipografía */
+  font-size: 20px !important;
+}
+
+p {
+  color: white;
+}
+
+img {
+  margin: auto;
+}
+
+/* VARIABLES CSS */
+
+:root {
+  --color: red;
+  --size: 8px;
+}
+
+h1 {
+  font-size: calc(var(--size)*5);
+}
+
+body {
+  background: var(--color);
+}
+
+.button {
+  background: var(--color);
+}
+
+.title {
+  color: var(--color);
+}
