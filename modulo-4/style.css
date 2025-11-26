@@ -1,0 +1,85 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  background: red;
+  width: 200px;
+  height: 100px;
+}
+
+p {
+  background: yellow;
+  height: 100px;
+}
+
+span {
+  background: green;
+  height: 150px;
+}
+
+h1 {
+  display: inline;
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+p {
+  display: inline;
+}
+
+span {
+  display: inline-block;
+  width: 30px;
+}
+
+.gallery {
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border: solid;
+}
+
+img {
+  /* margin: 20px; */
+  /* margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  margin-left: 20px; */
+  margin: 10px 5px;
+}
+
+.div-center {
+  background: red;
+  display: inline;
+}
+
+.div-center {
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid black;
+  width: 120px;
+  height: 120px;
+}
+
+.container {
+  text-align: center;
+}
+
+.div-center {
+  padding: 20px;
+}
+
+.content {
+  background: yellow;
+  width: 100px;
+  height: 50px;
+  margin-inline-start: 50px;
+  margin-block-start: 50px;
+  display: inline-block;
+  writing-mode: vertical-lr;
+  /* direction: rtl; */
+}

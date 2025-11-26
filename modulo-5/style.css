@@ -1,0 +1,102 @@
+.box {
+  width: 0;
+  /* background: yellow; */
+  margin: 2em auto 0;
+  color: black;
+  
+  /* border: 10px double black; */
+  
+  /* border-color: red green blue black;
+  border-style: solid dashed dotted double;
+  border-width: 5px 10px 20px 12px; */
+
+  /* border-top-color: red;
+  border-right-color: green;
+  border-bottom-color: blue;
+  border-left-color: black;
+
+  border-top-style: solid;
+  border-right-style: dotted;
+  border-bottom-style: dashed;
+  border-left-style: double;
+
+  border-top-width: 5px;
+  border-right-width: 10px;
+  border-bottom-width: 12px;
+  border-left-width: 20px; */
+
+  /* border-top: ;
+  border-right: ;
+  border-bottom: ;
+  border-width: ; */
+
+  /* border: 5px solid black; */
+  /* border-bottom-style: dashed; */
+  border-width: 10px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: red;
+}
+
+/*
+border-radius
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+.radius {
+  width: 200px;
+  height: 100px;
+  background: yellow;
+  border: 1px solid black;
+  /* border-radius: 
+    120px 120px 10px 10px / 
+    10px 10px 20px 20px; */
+}
+
+/* .circle {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+} */
+
+/* Outline */
+
+.radius {
+  /* outline: 4px solid red; */
+}
+
+h1 {
+  outline: 10px solid red;
+}
+
+body {
+  background: #444;
+}
+
+.radius {
+  background: #666;
+  border: 4px solid black;
+  border-radius: 5px;
+  box-shadow: 
+  -6px -6px 8px rgba(0,0,0,.6),
+  12px 0 12px -6px rgba(232, 65, 218, 0.8),
+  -12px 0 12px -6px rgba(64, 100, 245, 0.8),
+  0 -12px 12px -6px rgba(116, 237, 94, 0.8);
+}
+
+.sphere {
+  width: 100px;
+  height: 100px;
+  margin: 2em auto;
+  background: rgb(223, 73, 138);
+  border-radius: 50%;
+  box-shadow: -6px -6px 8px rgba(0,0,0,.5) inset,
+  1px 2px 2px rgba(255,255,255,.3) inset,
+  6px 6px 12px rgba(255,255,255, .1) inset;
+}

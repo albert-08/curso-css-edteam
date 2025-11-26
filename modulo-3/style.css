@@ -1,0 +1,96 @@
+/* h1 {
+  color: red;
+}
+
+.title {
+  color: green;
+}
+
+#title {
+  color: blue;
+}
+
+h1.title {
+  color: yellow;
+}
+
+h1#title {
+  color: pink !important;
+}
+
+h1.title#title {
+  color: purple;
+}
+
+body h1.title#title {
+  color: orange;
+} */
+
+/* h2 {
+  color: red !important;
+  color: green !important;
+  color: yellow !important;
+  border: 1px solid red;
+  border-left: none;
+} */
+
+/* .subtitle {
+  color: pink;
+}
+
+.subtitle {
+  color: orange;
+}
+
+.container {
+  color: red;
+  border: 1px solid;
+} */
+
+/* .theme-light {
+  background: #eee;
+  color: #111;
+}
+
+a {
+  color: inherit;
+}
+
+.theme-dark {
+  background: #111;
+  color: #eee;
+}
+
+.container li {
+  color: initial;
+} */
+
+@layer base;
+@layer theme;
+@layer color;
+
+@layer base {
+  h1 {
+    color: blue;
+  }
+}
+
+@layer theme {
+  h1 {
+    color: red;
+  }
+  @layer light {
+
+  }
+  @layer dark {
+
+  }
+}
+
+@layer theme.light {
+
+}
+
+@layer theme.dark {
+  
+}

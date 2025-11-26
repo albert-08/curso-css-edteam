@@ -1,0 +1,214 @@
+/*
+Las pseudoclases son selectores dinámicos o contextuales. Esto significa que su comportamiento va a depender de las circunstancias.
+
+La notación es con dos puntos (:)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+h1:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/* h1 :hover {
+  color: red;
+  cursor: pointer;
+} */
+
+/* Pseudoclases :hover :active :visited */
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: green;
+  /* transition: all 3s;
+  margin-left: 50px; */
+}
+
+a:active {
+  /* El momento en que se da click */
+  background: yellow;
+}
+
+a:visited {
+  color: blue;
+}
+
+/* Pseudoclases: target :not :empty */
+
+/* :target selecciona el destino de un enlace */
+
+h2 {
+  display: inline-block;
+}
+
+p {
+  display: none;
+}
+
+p:target {
+  display: block;
+}
+
+/* :not() selecciona a los elementos que no cumplan con la condición */
+
+.box {
+  display: inline-block;
+  background: red;
+  margin: 1em;
+  /* width: 100px;
+  height: 100px; */
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.container:hover .box:not(:hover) {
+  opacity: .3;
+}
+
+/* :empty */
+
+.box:empty {
+  display: none;
+}
+
+/* Pseudoclases de formularios */
+
+:required {
+  border: 1px solid red;
+}
+
+:checked {
+  box-shadow: 2px 2px 5px;
+}
+
+:focus {
+  outline: 1px solid green;
+  border-color: transparent;
+}
+
+/* Pseudoclases :is y :where */
+
+ul a,
+ul li,
+ul span {
+  color: red;
+}
+
+ul :is(a, li, span) {
+  color: red;
+}
+
+h1 a,
+li a,
+span a {
+  color: red;
+}
+
+:where(h1,li,span) a {
+  color: red;
+}
+
+/* Seleccionar elementos por su posición respecto a sus hermanos */
+
+.container {
+  text-align: center;
+  padding-top: 3em;
+}
+
+.item {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-color: purple;
+  color: white;
+  line-height: 60px;
+  margin: 10px 5px;
+}
+
+/* :first-child :last-child 
+    busca por el selector
+*/
+
+/* .item:first-child {
+  background: red;
+} */
+
+/* .item:last-child {
+  background: blue;
+} */
+
+/* nth-of-type nth-last-of-type
+   busca por el elemento html
+*/
+
+/* .item:last-of-type {
+  background: red;
+} */
+
+/*
+  nth-child() nth-of-type()
+  nth-last-child() nth-last-of-type()
+
+  El parámetro es del tipo (An+B [of S])
+*/
+
+/* El parámetro más sencillo es even (par) y odd (impar) */
+
+.item:nth-child(odd) {
+  /* background: red; */
+}
+
+/* Podemos usar un número específico */
+.item:nth-child(10) {
+  /* background: green; */
+}
+
+/* Podemos usar un múltiplo */
+
+.item:nth-child(4n) {
+  /* background: red; */
+}
+
+/* Podemos usar una ecuación sumando o restando un número al múltiplo
+IMPORTANTE: n siempre comienza en 0
+*/
+
+.item:nth-child(-n+5) {
+  /* selecciona los primeros 5 elementos */
+  /* background: red; */
+}
+
+.item:nth-last-child(-n+5) {
+  /* selecciona los últimos 5 elementos */
+  /* background: green; */
+}
+
+.item:nth-child(n+7) {
+  /* Selecciona todos los elementos excepto los primeros 7 */
+  /* background: red; */
+}
+
+.item:nth-last-child(n+7) {
+  /* Selecciona todos los elementos excepto los últimos 7 */
+  /* background: green; */
+}
+
+.item:nth-child(even):nth-child(-n+8) {
+  /* background: red; */
+}
+
+.item:nth-of-type(3n) {
+  /* background: red; */
+}
+
+.item:nth-child(even of div) {
+  /* background: red; */
+}
