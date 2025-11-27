@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background: red; */
+  padding-bottom: 1000px;
+  background: #222;
+}
+
+.box {
+  height: 200px;
+  width: 300px;
+  border: 1px solid black;
+  /* background-color: yellow; */
+  /* background-image: url(https://edteam-media.s3.amazonaws.com/app/utils/logo/isotipo-color.svg); */
+  /* repeat | no-repeat | repeat-y | repeat-x */
+  /* background-repeat: repeat; */
+  background: url(https://edteam-media.s3.amazonaws.com/app/utils/logo/isotipo-color.svg) no-repeat;
+  background-size: 100px;  
+}
+
+/* background-size */
+.box {
+  /* auto | width [height|auto] | contain | cover */
+  background-size: auto; /* La imagen usa sus dimensiones naturales */
+  background-size: 50%; /* Se le aplica el ancho y el navegador calcula el alto */
+  background-size: contain; /* Agranda el fondo hasta rellenar lo más posible el elemento, sin cortar ni deformar la imagen de fondo */
+  background-size: cover;
+}
+
+/* background-position: x y */
+.box {
+  background-size: 100px;
+  background-position: 0 0; /* predeterminado */
+  background-position: 10px 50px;
+  background-position: 90% 20%;
+  background-position: center;
+  background-position: right 10px bottom 10px;
+}
+
+/* background-origin y background-clip
+    content-box
+    padding-box
+    border-box
+*/
+
+.box {
+  /* background: yellow; */
+  background-size: cover;
+  background-position: 0 0;
+  border: 10px dashed black;
+  padding: 25px;
+  /* background-clip: content-box; */
+  background-origin: content-box;
+}
+
+/* background-attachment */
+
+.box {
+  background-attachment: scroll;
+  background-size: 300px;
+}
+
+.title {
+  color: #eee;
+  margin-bottom: 150px;
+}
+
+.banner {
+  color: #eee;
+  padding: 2em;
+  background-image: url(https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/banner-picture-desktop-alt-2025.webp);
+  background-size: 600px;
+  color: #eee;
+  padding: 2em;
+  background-attachment: fixed;
+}
+
+/* Background múltiples
+    Basta separarlos por comas. Y tener en cuenta que el primero que aparece en el código, es el que aparece encima. Y si quieres agregar color, ponlo al final.
+*/
+
+.box {
+  background: url(https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/banner-picture-desktop-alt-2025.webp),
+              url(https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-laptop-picture-desktop-2025.webp),
+              yellow;
+  background-size: 50%;
+  background-position: 0, right;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+/* Sintaxis del shorthand background 
+    background: image position / size repeat attachment origin clip;
+*/
+
+.box {
+  background: url(https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/banner-picture-desktop-alt-2025.webp) 0 / 50% no-repeat, url(https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-laptop-picture-desktop-2025.webp) right / 50% no-repeat, green;
+}

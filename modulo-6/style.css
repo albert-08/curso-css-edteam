@@ -210,5 +210,5 @@ IMPORTANTE: n siempre comienza en 0
 }
 
 .item:nth-child(even of div) {
-  /* background: red; */
+  background: red;
 }

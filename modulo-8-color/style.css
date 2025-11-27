@@ -1,0 +1,150 @@
+/* color
+
+  Color de frente: propiedad color
+  Color de fondo: propiedad background-color background-image
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: green;
+  margin: 0;
+}
+
+h1 {
+  /* box-shadow: 1px 1px 2px 2px; */
+  background: yellow;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+
+h1:hover {
+  border-color: currentColor;
+}
+
+span {
+  background: transparent;
+  color: rgba(44, 209, 255, 0.1);
+}
+
+/* Notación RGB (aditiva)
+
+    Todos los colores generados por luz tienen tres canales:
+    Red 0-255 
+    Green 0-255
+    Blue 0-255
+
+    a - alpha: Indica transparencia 0-1
+
+    Existe otra notación: CMYK que es para impresoras. (sustractiva)
+*/
+
+h1 {
+  background: rgba(0, 0, 255);
+}
+
+/* Notación hexadecimal
+
+  Valores de 0 a 15 (16 en total).
+
+  0 1 2 3 4 5 6 7 8 9 A B C D E F
+  0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+*/
+
+h1 {
+  background: #ff55aa88;
+  /* background: #f5a; */
+}
+
+/* Notación HSL
+
+    Hue (tono, de 0 a 360)
+    Saturation (intensidad de color, de 0, gris a 100%, el color puro).
+    Light (luz, de 0%, negro, a 100% que es blanco).
+*/
+
+body {
+  background: hsl(220, 100%, 70%);
+}
+
+/* Degradados
+
+    background-image: linear-gradient(color1, color2, color3)
+    background-image: radial-gradient(color1, color2, color3)
+
+    Para que los degradados se vean bien seguir el circulo cromático
+*/
+
+body {
+  color: #fff;
+  background: linear-gradient(
+              100deg,
+              hsl(180,80%,70%) 100px,
+              hsl(300,80%,75%) 100px,
+              hsl(300,80%,75%) 200px,
+              hsl(60,100%,70%) 200px
+  );
+  background: radial-gradient(
+              100px,
+              hsl(300,80%,75%),
+              hsl(60,100%,70%)
+  );
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+              to right,
+              transparent,
+              transparent 20px,
+              black 20px,
+              black 40px
+              ),
+              repeating-linear-gradient(
+              white,
+              white 20px,
+              black 20px,
+              black 40px
+              );
+  background: repeating-radial-gradient(
+              100px,
+              white,
+              white 10px,
+              black 20px
+              );
+  background: #333;
+}
+
+.box {
+  --size: 250px;
+  width: var(--size);
+  height: var(--size);
+  margin: 1em auto;
+  border-radius: 50%;
+  background:
+  /* Circulo negro pequeño */
+    radial-gradient(
+      10% 10% at 50% 25%,
+      black 50%, transparent 50%
+    ),
+    /* Circulo blanco grande */
+    radial-gradient(
+      50% 50% at 50% 25%,
+      white 50%, transparent 50%
+    ),
+    /* Circulo blanco pequeño */
+    radial-gradient(
+      10% 10% at 50% 75%,
+      white 50%, transparent 50%
+    ),
+    /* Circulo negro grande */
+    radial-gradient(
+      50% 50% at 50% 75%,
+      black 50%, transparent 50%
+    ),
+    /* División de blanco y negro del círculo principal */
+    linear-gradient(
+      to right, white 50%, black 50%
+    );
+}
